@@ -14,22 +14,21 @@ function performanceSystem(employees) {
         "Needs Improvement": 3
     };
 
-    const filterd = employees.filter((employee) => employee.tasksCompleted > 5);
-
-    const mapped = filterd.map(employee => {
-        let performance;
-        if (employee.rating > 4.5) {
-            performance = "Excellent";
-        } else if (employee.rating >= 3 && employee.rating <= 4.5) {
-            performance = "Good";
-        } else {
-            performance = "Needs Improvement";
-        }
-        return { name: employee.name, performance };
-    })
+    const filterd = employees.filter((employee) => employee.tasksCompleted > 5)
+        .map(employee => {
+            let performance;
+            if (employee.rating > 4.5) {
+                performance = "Excellent";
+            } else if (employee.rating >= 3 && employee.rating <= 4.5) {
+                performance = "Good";
+            } else {
+                performance = "Needs Improvement";
+            }
+            return { name: employee.name, performance };
+        })
         .sort((a, b) => rank[a.performance] - rank[b.performance]);
 
-    return mapped;
+    return filterd;
 }
 
 console.log(performanceSystem(employees));

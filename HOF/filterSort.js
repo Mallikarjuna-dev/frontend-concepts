@@ -17,15 +17,11 @@ const students = [
 ];
 
 function processStudents(students) {
-    const filtered = students.filter(student => student.marks > 60);
+    const res = students.filter(student => student.marks > 60)
+        .sort((a, b) => b.marks - a.marks)
+        .map(student => student.name);
 
-    const sorted = filtered.sort((a, b) => b.marks - a.marks);
-
-    const mapped = sorted.map(student => student.name);
-
-    // console.log(filtered);
-    // console.log(sorted);
-    console.log(mapped)
+    return res;
 };
 
-processStudents(students);
+console.log(processStudents(students));
