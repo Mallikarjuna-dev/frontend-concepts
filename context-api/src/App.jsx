@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import Box from "./components/Box";
 import { ThemeProvider, useTheme } from "./ThemeContext";
 import Top from "./Top";
+import MainContent from "./MainContent";
+import { AuthProvider } from "./AuthContext";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function AppContent() {
   const { theme, toggleTheme } = useTheme();
@@ -41,10 +45,21 @@ export default function App() {
         <Top userName={userName} />
       </div>
 
+      <br />
+
       {/* Theme toggler */}
       <ThemeProvider>
         <AppContent />
       </ThemeProvider>
+
+      <br />
+
+      {/* Authentication task with ContextApi */}
+      <AuthProvider>
+        <Navbar />
+        <MainContent />
+        <Footer />
+      </AuthProvider>
     </>
   );
 }
