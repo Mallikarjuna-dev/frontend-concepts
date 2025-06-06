@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "./components/Box";
 import { ThemeProvider, useTheme } from "./ThemeContext";
+import Top from "./Top";
 
 function AppContent() {
   const { theme, toggleTheme } = useTheme();
@@ -25,9 +26,25 @@ function AppContent() {
 }
 
 export default function App() {
+  const [userName, setUserName] = useState("");
   return (
-    <ThemeProvider>
-      <AppContent />
-    </ThemeProvider>
+    <>
+      {/* Task 1: prop Drilling */}
+      <div>
+        <h1>Prop Drilling Demo</h1>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
+        />
+        <Top userName={userName} />
+      </div>
+
+      {/* Theme toggler */}
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
+    </>
   );
 }
