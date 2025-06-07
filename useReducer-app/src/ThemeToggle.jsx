@@ -46,7 +46,7 @@ function ThemeToggle() {
 
 const styles = {
     container: {
-        minHeight: '90vh',
+        minHeight: '80vh',
         padding: '50px',
         transition: 'all 0.3s ease',
         fontFamily: 'Arial, sans-serif',

@@ -11,9 +11,21 @@ This project demonstrates a theme toggle feature built with React's `useReducer`
 - UI updates dynamically based on the current theme
 - Clean and minimal code structure
 
+# Task 2: Simple Counter App using useReducer
+
+## 🚀 Description
+
+This project demonstrates a basic implementation of the `useReducer` hook in React. It features a simple counter with "Increment" and "Decrement" buttons.
+
+## 🔧 Features
+
+- State managed by `useReducer`
+- Two actions: INCREMENT and DECREMENT
+- Dynamic UI updates based on reducer logic
+
 ## 🧪 How to Run Locally
 
-1. Clone the repo:
+1. Clone the repository:
 
 ```
 git clone https://github.com/your-username/theme-toggle-useReducer.git
