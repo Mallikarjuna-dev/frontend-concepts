@@ -23,6 +23,24 @@ This project demonstrates a basic implementation of the `useReducer` hook in Rea
 - Two actions: INCREMENT and DECREMENT
 - Dynamic UI updates based on reducer logic
 
+# Task 3: 👁️ Toggle Message Visibility using useReducer
+
+## 🔍 Overview
+
+This React app demonstrates how to use the `useReducer` hook to manage simple boolean state — specifically toggling the visibility of a message.
+
+## 🎯 Features
+
+- Toggles message visibility on button click
+- State managed through `useReducer`
+- Clean, readable code with inline styles
+
+## 🧠 Concepts Covered
+
+- React `useReducer` hook
+- Action dispatching (`TOGGLE_VISIBILITY`)
+- Conditional rendering
+
 ## 🧪 How to Run Locally
 
 1. Clone the repository:
@@ -50,6 +68,7 @@ npm run dev
 - Learned how to replace multiple `useState` calls with a single `useReducer`
 - Gained insight into how to structure reducer functions for scalable state management
 - Experienced real-world usage of action dispatching and dynamic UI styling
+- `useReducer` is useful even for simple state like booleans
 
 ## 👤 Author
 
