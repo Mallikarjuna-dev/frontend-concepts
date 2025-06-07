@@ -60,6 +60,24 @@ This React app demonstrates form state management using the `useReducer` hook. T
 1. On load → "No details found" is displayed.
 2. Enter email/password → submit → shows the user data.
 
+# Task 5: 🎓 College Form - useReducer
+
+## 📌 Description
+
+A React form that uses `useReducer` to manage deeply nested form data related to colleges, including:
+
+- Name and Establishment Year
+- Address with nested structure
+- List of courses offered
+
+## ✅ Features
+
+- Dynamic form state using `useReducer`
+- Nested and deeply nested field updates
+- Add multiple courses
+- Reset form to initial state
+- Error handling for invalid actions
+
 ## 🧪 How to Run Locally
 
 1. Clone the repository:

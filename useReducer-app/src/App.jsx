@@ -1,4 +1,5 @@
 import './App.css'
+import CollegeFormData from './CollegeFormData'
 import Counter from './Counter'
 import FormData from './FormData'
 import ThemeToggle from './ThemeToggle'
@@ -25,6 +26,11 @@ function App() {
 
       {/* Task 4: Form Data */}
       <FormData />
+
+      <hr style={{ marginTop: "20px" }} />
+
+      {/* Task s: Complex College Form Data */}
+      <CollegeFormData />
     </>
   )
 }
