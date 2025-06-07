@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import UseRefFocus from './UseRefFocus';
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -32,36 +33,45 @@ const App = () => {
   };
 
   return (
-    <div className="container">
-      <h1>Todo List</h1>
-      <ul className="todo-list">
-        {currentTodos.map((todo) => (
-          <li key={todo.id}>
-            #{todo.id} - {todo.title}
-          </li>
-        ))}
-      </ul>
+    <>
+      <div className="container">
+        <h1>Todo List</h1>
+        <ul className="todo-list">
+          {currentTodos.map((todo) => (
+            <li key={todo.id}>
+              #{todo.id} - {todo.title}
+            </li>
+          ))}
+        </ul>
 
-      <div className="pagination">
-        <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
-          Prev
-        </button>
-
-        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-          <button
-            key={page}
-            onClick={() => handlePageChange(page)}
-            className={page === currentPage ? 'active' : ''}
-          >
-            {page}
+        <div className="pagination">
+          <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+            Prev
           </button>
-        ))}
 
-        <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
-          Next
-        </button>
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            <button
+              key={page}
+              onClick={() => handlePageChange(page)}
+              className={page === currentPage ? 'active' : ''}
+            >
+              {page}
+            </button>
+          ))}
+
+          <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+            Next
+          </button>
+        </div>
       </div>
-    </div>
+
+      <hr />
+
+      <div style={{margin: "50px"}}>
+        <UseRefFocus />
+      </div>
+
+    </>
   );
 };
 
