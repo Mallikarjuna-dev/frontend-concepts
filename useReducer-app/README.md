@@ -41,6 +41,25 @@ This React app demonstrates how to use the `useReducer` hook to manage simple bo
 - Action dispatching (`TOGGLE_VISIBILITY`)
 - Conditional rendering
 
+# Task 4: 🧾 useReducer Form Handling
+
+## 📋 Overview
+
+This React app demonstrates form state management using the `useReducer` hook. The form captures **email** and **password**, shows submitted details, and supports reset functionality.
+
+## ✅ Features
+
+- State managed via `useReducer`
+- Action types: `email`, `password`, `submit`, `reset`
+- Validates presence of inputs before displaying result
+- Resets to initial state using `reset` action
+- Throws error for invalid action type
+
+## 🧪 Example Behavior
+
+1. On load → "No details found" is displayed.
+2. Enter email/password → submit → shows the user data.
+
 ## 🧪 How to Run Locally
 
 1. Clone the repository:
