@@ -1,5 +1,6 @@
 import './App.css'
 import Counter from './Counter'
+import FormData from './FormData'
 import ThemeToggle from './ThemeToggle'
 import ToggleMessage from './ToggleMessage'
 
@@ -21,6 +22,9 @@ function App() {
       <ToggleMessage />
 
       <hr style={{ marginTop: "20px" }} />
+
+      {/* Task 4: Form Data */}
+      <FormData />
     </>
   )
 }
